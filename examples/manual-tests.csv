@@ -1,0 +1,16 @@
+ID,Title,Preconditions,Step #,Step,Expected result,Priority,Type,Platform
+TC-1,Sign in with valid credentials,User has an account,1,Navigate to /login,The Sign in page is displayed,High,Functional,Web
+,,,2,"Enter ""ana@example.com"" in the Email field",,,,
+,,,3,"Enter ""secret123"" in the Password field",,,,
+,,,4,Check the Remember me checkbox,,,,
+,,,5,Click the Sign in button,"User is redirected to the dashboard
+""Welcome, ana@example.com"" is displayed",,,
+TC-2,Sign in with a wrong password,,1,Navigate to /login,,High,Negative,Web
+,,,2,"Enter ""ana@example.com"" in the Email field",,,,
+,,,3,"Type ""wrong-password"" into Password",,,,
+,,,4,"Select ""India"" from the Country dropdown",,,,
+,,,5,Click Sign in,"Error message ""Invalid email or password"" is displayed",,,
+,,,6,Verify that the Forgot password? link is visible,,,,
+TC-3,Sign out returns to the start,User is signed in,1,Navigate to /dashboard?email=ana@example.com,,Medium,Functional,Web
+,,,2,Click the Sign out button,User is redirected to the login page,,,
+,,,3,Verify the order history matches last month's statement,,,,

@@ -1,0 +1,28 @@
+{
+  "name": "automation-script-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Converts manual test cases into Playwright, Selenium, Appium and API automation projects.",
+  "bin": {
+    "autogen": "./bin/autogen.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "serve": "node bin/autogen.js serve",
+    "demo-app": "node examples/demo-app.js 5199"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "@playwright/test": "^1.65.1",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.2"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.52.0",
+    "tsx": "^4.23.15"
+  }
+}

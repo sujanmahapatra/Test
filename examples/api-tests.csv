@@ -1,0 +1,11 @@
+ID,Title,Step,Expected result,Platform
+API-1,Login returns a token,"Send a POST request to /api/login with body {""email"":""ana@example.com"",""password"":""secret123""}","Status code should be 200
+Response contains field ""token""
+user.email equals ""ana@example.com""",API
+API-2,Login with a wrong password is refused,"Send a POST request to /api/login with body {""email"":""ana@example.com"",""password"":""nope""}","Status code should be 401
+Response contains field ""error""",API
+API-3,Get a user by id,GET /api/users/1,"Status code should be 200
+Response body name equals ""Ana""",API
+API-4,Create a user,"POST /api/users with body {""name"":""Ravi"",""email"":""ravi@example.com""}","Returns 201 Created
+Response contains field ""id""
+name equals ""Ravi""",API
